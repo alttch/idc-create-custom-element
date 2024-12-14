@@ -1,5 +1,6 @@
 import { JSX, DispatchWithoutAction } from "react";
 import { IDCElement } from "idc-custom-elements";
+import packageInfo from "../package.json";
 
 interface ElementParameters {};
 
@@ -26,3 +27,7 @@ const element = new IDCElement("%NAME%", Element)
   .iconDraw(() => <div style={{ fontSize: 21 }}>🌍</div>);
 
 export default element.export();
+
+console.debug(
+  `Element module ${packageInfo.name} v${packageInfo.version} loaded`
+);
