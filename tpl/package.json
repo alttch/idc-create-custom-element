@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "build": "npx webpack --config webpack.config.js",
-    "install-local": "cp ./dist/*.js /opt/eva4/pvt/vendored-apps/opcentre/idc/elements/"
+    "upload": "npx eva-ics-cli pvt.put path=vendored-apps/opcentre/idc/elements/%NAME%.js content=@./dist/%NAME%.js",
+    "install-local": "cp ./dist/%NAME%.js /opt/eva4/pvt/vendored-apps/opcentre/idc/elements/"
   },
   "author": "",
   "license": "ISC",
@@ -22,6 +23,7 @@
     "ts-loader": "^9.5.1",
     "typescript": "^5.7.2",
     "webpack": "^5.97.1",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "eva-ics-cli": "^0.0.1"
   }
 }

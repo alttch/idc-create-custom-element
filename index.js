@@ -16,7 +16,7 @@ if (!/^[a-zA-Z][a-zA-Z0-9_]*$/.test(module_name)) {
   process.exit(1);
 }
 
-console.log(`Creating custom IDC element ${module_name}...`);
+console.log(`Creating custom IDC element module ${module_name}...`);
 
 fs.mkdirSync(module_name);
 process.chdir(module_name);
@@ -40,6 +40,9 @@ console.log("Run `npm install` to install dependencies.");
 console.log("Run `npm run build` to build the project.");
 console.log(
   "Run `npm run install-local` to install the module into local EVA ICS instance."
+);
+console.log(
+  "Run `npm run upload` to upload the module to the remote EVA ICS instance."
 );
 console.log("");
 console.log(
