@@ -1,0 +1,27 @@
+{
+  "name": "%NAME%",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "build": "npx webpack --config webpack.config.js",
+    "install-local": "cp ./dist/*.js /opt/eva4/pvt/vendored-apps/opcentre/idc/elements/"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@eva-ics/webengine-react": "^0.5.13",
+    "idc-custom-elements": "^0.0.3",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-react": "^7.26.3",
+    "@types/react": "^19.0.1",
+    "babel-loader": "^9.2.1",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.7.2",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^5.1.4"
+  }
+}
