@@ -4,7 +4,6 @@ import { IDCElement } from "idc-custom-elements";
 interface ElementParameters {};
 
 const Element = ({
-  kind,
   dragged,
   vendored,
   setVariable,
@@ -12,7 +11,6 @@ const Element = ({
   forceUpdate,
   ...params
 }: {
-  kind: string;
   dragged: boolean;
   vendored?: any;
   setVariable: (name: string, value: string) => void;
