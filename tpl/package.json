@@ -9,6 +9,7 @@
   },
   "author": "",
   "license": "ISC",
+  "private": true,
   "dependencies": {
     "@eva-ics/webengine-react": "^0.5.13",
     "idc-custom-elements": "^0.0.4",
