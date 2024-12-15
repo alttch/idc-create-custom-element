@@ -1,13 +1,13 @@
 {
   "name": "idc-create-custom-element",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "bin": {
     "idc-create-custom-element": "./index.js"
   },
   "files": [
     "index.js",
-    "tpl/*"
+    "tpl-*/*"
   ],
   "author": "Bohemia Automation",
   "license": "MIT",
