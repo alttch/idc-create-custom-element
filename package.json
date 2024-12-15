@@ -10,5 +10,8 @@
     "tpl/*"
   ],
   "author": "Bohemia Automation",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "minimist": "^1.2.8"
+  }
 }

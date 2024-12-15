@@ -3,10 +3,29 @@
 const fs = require("fs");
 const path = require("path");
 
-const module_name = process.argv[2];
+const argv = require("minimist")(process.argv.slice(2));
+const module_name = argv._[0];
+
+const usage = () => {
+  console.log("Usage: idc-create-custom-element [options] <module_name>");
+  console.log("Options:");
+  console.log("  -b <bundler>     Specify bundler: webpack (default) or vite");
+  console.log("  -h, --help       Display this help");
+  console.log("Commands:");
+  console.log(
+    "  See https://info.bma.ai/en/actual/eva4/svc/eva-hmi.html#http-api"
+  );
+  console.log("Getting argument value from a file:");
+  console.log("  Specify argument as arg=@file");
+};
+
+if (argv.h || argv.help) {
+  usage();
+  process.exit(0);
+}
 
 if (!module_name) {
-  console.error("Please provide a name for your project.");
+  usage();
   process.exit(1);
 }
 if (!/^[a-zA-Z][a-zA-Z0-9_]*$/.test(module_name)) {
@@ -22,7 +41,14 @@ fs.mkdirSync(module_name);
 process.chdir(module_name);
 fs.mkdirSync("src");
 
-const tplDir = path.join(__dirname, "tpl");
+const bundler = argv.b || "webpack";
+if (bundler !== "webpack" && bundler !== "vite") {
+  console.error("Unsupported bundler");
+  usage();
+  process.exit(1);
+}
+
+const tplDir = path.join(__dirname, `tpl-${bundler}`);
 const files = fs.readdirSync(tplDir);
 
 files.forEach((file) => {
