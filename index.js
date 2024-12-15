@@ -11,12 +11,6 @@ const usage = () => {
   console.log("Options:");
   console.log("  -b <bundler>     Specify bundler: webpack (default) or vite");
   console.log("  -h, --help       Display this help");
-  console.log("Commands:");
-  console.log(
-    "  See https://info.bma.ai/en/actual/eva4/svc/eva-hmi.html#http-api"
-  );
-  console.log("Getting argument value from a file:");
-  console.log("  Specify argument as arg=@file");
 };
 
 if (argv.h || argv.help) {
