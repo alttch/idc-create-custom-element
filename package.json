@@ -1,6 +1,6 @@
 {
   "name": "idc-create-custom-element",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "",
   "bin": {
     "idc-create-custom-element": "./index.js"
